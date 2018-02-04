@@ -11,7 +11,7 @@ var types = {
 	WORD: 'WORD'
 };
 
-module.exports = function (str, opts) {
+window.selectiveWhitespace = function (str, opts) {
 	if (typeof str !== 'string') {
 		throw new TypeError('selective-whitespace expects a string');
 	}
