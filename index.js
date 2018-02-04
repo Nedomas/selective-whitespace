@@ -1,8 +1,4 @@
-'use strict';
-
-var tokenize = require('tokenize-whitespace');
-
-// the values used by tokenize-whitespace
+// the values used by e-whitespace
 var types = {
 	NEWLINE: 'LINEFEED',
 	TAB: 'HORIZONTALTAB',
@@ -20,7 +16,7 @@ window.selectiveWhitespace = function (str, opts) {
 		return str.trim().replace(/\s{2,}/g, ' ');
 	}
 
-	var tokens = tokenize(str);
+	var tokens = tokenizeWhitespace(str);
 
 	var options = opts || {};
 	var keep = options.keep ? options.keep.split(/,|\|/) : [];
